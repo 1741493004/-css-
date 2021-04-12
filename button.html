@@ -1,6 +1,6 @@
 <!--
  * @Date: 2021-04-12 09:01:29
- * @LastEditTime: 2021-04-12 09:32:30
+ * @LastEditTime: 2021-04-12 09:49:24
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -9,23 +9,32 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>霓虹按钮效果</title>
+		<!--转载自： 掘金  chor -->
     <!-- 实现思路网址 -->
-    <!-- https://juejin.cn/post/6949433605231738917?utm_source=gold_browser_extension -->
+		<!-- https://juejin.cn/post/6949433605231738917?utm_source=gold_browser_extension -->
+
+
+    <!-- 从看不到的地方 - 可视区 -  看不到的地方  形成一种视觉误差-->
+    <!-- 这种误差能使线条看起来在运动且无缝 -->
 		<style>
 			body {
 				background: #050901;
 			}
 			.light {
 				position: relative;
+        /* 新属性 */
 				width: fit-content;
 				padding: 25px 40px;
 				color: #03e9f4;
 				font-size: 24px;
+        /* 新属性 */
 				text-transform: uppercase;
+        /* 新属性 */
 				letter-spacing: 4px;
 				overflow: hidden;
 				transition: 0.5s;
 			}
+      /* box-shadow效果不太了解 */
 			.light:hover {
 				background-color: #03e9f4;
 				color: #050801;
@@ -35,8 +44,8 @@
 			.light div {
 				position: absolute;
 			}
-      /* 使用4个div仿照4个4条线运动 */
-      /* 线是渐变色，透明到字体的颜色 */
+			/* 使用4个div仿照4条线运动 */
+			/* 线是渐变色，透明到字体的颜色 */
 			.light div:nth-child(1) {
 				top: 0;
 				left: 0;
@@ -73,7 +82,7 @@
 				animation: leftLine 1s linear infinite;
 				animation-delay: 0.75s;
 			}
-      
+
 			@keyframes topLine {
 				0% {
 					left: -100%;
